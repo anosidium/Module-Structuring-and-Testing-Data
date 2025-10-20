@@ -25,3 +25,11 @@ console.log(`£${pounds}.${pence}`);
 
 // To begin, we can start with
 // 1. const penceString = "399p": initialises a string variable with the value "399p"
+// 3. Declares a variable with the value of "399" by truncating the character `p`
+// 8. Declares a variable with the value of "399" by prefixing with three `0`
+// but does not actually do that because the length of the string is 3 and prefixing three `0` exceeds the length 
+// 9. Declares a variable by extracting the 3 pounds from the currency
+// by using the substring method starting from the beginning of the string and going up by 1 unit
+// 10. Declares a variable by extracting the pence from the currency
+// by using the substring method starting from the end of the string and then add 2 `0` but does not do that because it exceeds the length of the string
+// 18. Prints the currency by using the pounds variable prefixed with pound sign (£) and the pence variable which are separated with the . character
