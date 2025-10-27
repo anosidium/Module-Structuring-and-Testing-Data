@@ -15,12 +15,48 @@ To be valid, a password must:
 You must breakdown this problem in order to solve it. Find one test case first and get that working
 */
 const isValidPassword = require("./password-validator");
-test("password has at least 5 characters", () => {
-    // Arrange
-    const password = "12345";
-    // Act
-    const result = isValidPassword(password);
-    // Assert
-    expect(result).toEqual(true);
-}
-);
+
+test("invalid password (numbers only)", () => {
+  // Arrange
+  const password = "12345";
+  // Act
+  const result = isValidPassword(password);
+  // Assert
+  expect(result).toEqual(false);
+});
+
+test("invalid password (lowercase letters only)", () => {
+  const password = "abcde";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
+
+test("invalid password (uppercase letters only)", () => {
+  const password = "QWERTY";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
+
+test("invalid password (non-alphanumeric symbols only)", () => {
+  const password = "!#$%.*&!";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
+
+test("valid password", () => {
+  const password = "aB1!cD";
+  const result = isValidPassword(password);
+  expect(result).toEqual(true);
+});
+
+test("duplicate password", () => {
+  const password = "aB1!cD";
+  const result = isValidPassword(password);
+  expect(result).toEqual(false);
+});
+
+test("new valid password", () => {
+  const password = "zX1$2£€";
+  const result = isValidPassword(password);
+  expect(result).toEqual(true);
+});
