@@ -12,7 +12,7 @@ console.log(`The percentage change is ${percentageChange}`);
 // Read the code and then answer the questions below
 
 // a) How many function calls are there in this file? Write down all the lines where a function call is made
-// Line 4, 5, 10
+// 5 (2 × Number(), 2 × replaceAll(), 1 × log())
 
 // b) Run the code and identify the line where the error is coming from - why is this error occurring? How can you fix this problem?
 // It's missing a comma between the arguments at line 5 in replaceAll() method

@@ -10,6 +10,6 @@ const num = Math.floor(Math.random() * (maximum - minimum + 1)) + minimum;
 
 // num represents a random number in the interval [1,100]
 // First, it starts with 100 - 1 + 1, which is equals to 100
-// Secondly, it multiply with Math.random(), which the function returns any number in the interval [0,1]
+// Secondly, it multiply with Math.random(), which the function returns any number in the interval [0,1)
 // Thirdly, Math.floor() rounds down and returns the largest integer less than or equal to a given number
 // Finally, it adds 1

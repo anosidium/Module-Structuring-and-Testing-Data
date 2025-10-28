@@ -26,4 +26,6 @@ It displays an alert with a textfield where you can enter some text, e.g. John.
 
 What is the return value of `prompt`?
 
-The string returned from the textfield what the user has entered otherwise null if the user left it blank.
+If the user has entered text, the return value is a string containing the entered text.
+If the user leaves the text field blank and clicks the OK button, the return value is an empty string.
+If the user enters a name or leaves the text field blank but clicks the Cancel button, the return value is null.
