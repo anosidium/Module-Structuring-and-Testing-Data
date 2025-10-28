@@ -26,4 +26,4 @@ It displays an alert with a textfield where you can enter some text, e.g. John.
 
 What is the return value of `prompt`?
 
-The string returned from the textfield what the user has entered otherwise null.
+The string returned from the textfield what the user has entered otherwise null if the user left it blank.
