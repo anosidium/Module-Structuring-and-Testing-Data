@@ -25,8 +25,5 @@ console.log(decimalNumber);
 // =============> write your new code here
 
 function percentaged(decimalNumber) {
-  const constant = 0.5;
-  const percentage = `${constant * 100}%`;
-
-  return percentage;
+  return `${decimalNumber * 100}%`;
 }

@@ -29,19 +29,19 @@ console.log(formatTimeDisplay(number));
 // b) What is the value assigned to num when pad is called for the first time?
 // =============> write your answer here
 
-// 0
+// "0"
 
 // c) What is the return value of pad is called for the first time?
 // =============> write your answer here
 
-// 00
+// "00"
 
 // d) What is the value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
 
-// 1
+// "1"
 
 // e) What is the return value assigned to num when pad is called for the last time in this program?  Explain your answer
 // =============> write your answer here
 
-// 01
+// "01"
