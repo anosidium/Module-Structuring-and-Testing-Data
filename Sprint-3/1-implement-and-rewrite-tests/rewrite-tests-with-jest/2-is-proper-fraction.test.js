@@ -9,18 +9,12 @@ test("should return true for a proper fraction", () => {
 // Case 2: Identify Improper Fractions:
 test("should return false for an improper fraction", () => {
   expect(isProperFraction(3, 2)).toEqual(false);
-});
-
-test("should return false for an improper fraction", () => {
   expect(isProperFraction(-5, 3)).toEqual(false);
 });
 
 // Case 3: Identify Negative Fractions:
 test("should return true for a negative fraction", () => {
   expect(isProperFraction(-4, 7)).toEqual(true);
-});
-
-test("should return true for a negative fraction", () => {
   expect(isProperFraction(4, -7)).toEqual(true);
 });
 
