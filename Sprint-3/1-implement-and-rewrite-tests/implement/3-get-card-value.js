@@ -14,7 +14,7 @@ function getCardValue(card) {
     return 11;
   } else if (["J", "Q", "K"].includes(rank)) {
     return 10;
-  } else if (!isNaN(rank) && rank >= 2 && rank <= 10) {
+  } else if (rank >= 2 && rank <= 10) {
     return Number(rank);
   } else {
     return "Invalid card rank.";
