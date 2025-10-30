@@ -17,7 +17,7 @@ function getCardValue(card) {
   } else if (rank >= 2 && rank <= 10) {
     return Number(rank);
   } else {
-    return "Invalid card rank.";
+    return new Error("Invalid card rank.");
   }
 }
 

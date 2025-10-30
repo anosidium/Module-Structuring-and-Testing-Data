@@ -33,6 +33,5 @@ test("should return 11 for an Ace", () => {
 
 // Case 5: Handle Invalid Cards:
 test("should return `Invalid card rank.` for an invalid card", () => {
-  const invalidRank = getCardValue("@");
-  expect(invalidRank).toEqual("Invalid card rank.");
+  expect(() => getCardValue("@").toThrow("Invalid card rank."));
 });
