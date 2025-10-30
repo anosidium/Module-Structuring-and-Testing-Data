@@ -8,13 +8,13 @@
 // write one test at a time, and make it pass, build your solution up methodically
 // just make one change at a time -- don't rush -- programmers are deep and careful thinkers
 function getCardValue(card) {
-  const rank = card.slice(0, -1);
+  const rank = card.length > 1 ? card.slice(0, -1) : card;
 
   if (rank === "A") {
     return 11;
   } else if (["J", "Q", "K"].includes(rank)) {
     return 10;
-  } else if (rank >= 2 && rank <= 10) {
+  } else if (/^(?:[2-9]|10)$/.test(rank)) {
     return Number(rank);
   } else {
     return new Error("Invalid card rank.");
@@ -67,5 +67,13 @@ assertEquals(ace, 11);
 // Given a card with an invalid rank (neither a number nor a recognized face card),
 // When the function is called with such a card,
 // Then it should throw an error indicating "Invalid card rank."
+
+// assertEquals() doesn’t handle an actual Error being thrown, so the console will display:
+//
+// Expected Error: Invalid card rank. to equal Invalid card rank.
+// 3-get-card-value.js:32
+// Assertion failed: Expected Error: Invalid card rank. to equal Invalid card rank.
+//
+// It will work if getCardValue() returns a string instead.
 const invalidRank = getCardValue("@");
 assertEquals(invalidRank, "Invalid card rank.");
