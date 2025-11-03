@@ -8,7 +8,7 @@ const getOrdinalNumber = require("./get-ordinal-number");
 // When the number is 1,
 // Then the function should return "1st"
 
-test("should return '@' for ", () => {
+test("should return an empty string for a non-numerical character", () => {
   expect(getOrdinalNumber("@")).toEqual("");
 });
 
@@ -18,6 +18,14 @@ test("should return '0' for 0", () => {
 
 test("should return '11th' for 11", () => {
   expect(getOrdinalNumber(11)).toEqual("11th");
+});
+
+test("should return '12th' for 12", () => {
+  expect(getOrdinalNumber(12)).toEqual("12th");
+});
+
+test("should return '13th' for 13", () => {
+  expect(getOrdinalNumber(13)).toEqual("13th");
 });
 
 test("should return '-11th' for -11", () => {

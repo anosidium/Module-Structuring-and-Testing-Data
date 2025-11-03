@@ -8,11 +8,9 @@ function getOrdinalNumber(num) {
   const lastDigits = Number(numberString.slice(-2));
   let ordinal;
 
-  console.log("lastDigits", lastDigits);
-
   if (num === 0) {
     ordinal = "";
-  } else if (lastDigits === 11) {
+  } else if ([11, 12, 13].includes(lastDigits)) {
     ordinal = "th";
   } else if (lastDigit === 1) {
     ordinal = "st";

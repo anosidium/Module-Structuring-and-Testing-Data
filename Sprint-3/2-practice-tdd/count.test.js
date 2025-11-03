@@ -23,9 +23,48 @@ test("should count multiple occurrences of a character", () => {
 // When the function is called with these inputs,
 // Then it should return 0, indicating that no occurrences of the char were found in the case-sensitive str.
 
-test("should count no occurences of z characters", () => {
+test("should count no occurrences of z characters", () => {
   const str = "aaaaa";
   const char = "z";
   const count = countChar(str, char);
   expect(count).toEqual(0);
+});
+
+test("should return 0 for an empty string and a non-empty character", () => {
+  const str = "";
+  const char = "z";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+test("should return 0 for an empty string and a whitespace character", () => {
+  const str = "";
+  const char = " ";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+test("should return 0 when the string contains the character in a different case", () => {
+  const str = "aBcDeF";
+  const char = "A";
+  const count = countChar(str, char);
+  expect(count).toEqual(0);
+});
+
+test("throws error when the first argument is not a string", () => {
+  expect(() => countChar(1234, "1")).toThrow(
+    "The argument for parameter stringOfCharacters is not a String type"
+  );
+});
+
+test("throws error when the second argument is not a string", () => {
+  expect(() => countChar("1234", 1)).toThrow(
+    "The argument for parameter findCharacter is not a String type"
+  );
+});
+
+test("throws error when second argument is longer than one character", () => {
+  expect(() => countChar("1234", "12")).toThrow(
+    "Parameter findCharacter is must contain a single character"
+  );
 });
